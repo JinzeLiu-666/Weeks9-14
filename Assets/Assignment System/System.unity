@@ -527,18 +527,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8607240412283667944}
-        m_TargetAssemblyTypeName: LampFlasher, Assembly-CSharp
-        m_MethodName: StartFlashing
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 8607240412283667944}, m_TargetAssemblyTypeName: LampFlasher, Assembly-CSharp, m_MethodName: StartFlashing, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+    m_CallsDirty: 1
   lampController: {fileID: 2894239068922545106}
 --- !u!4 &2686079711737547678
 Transform:
@@ -1302,9 +1292,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4921742841911914262}
   - {fileID: 2759549335744552140}
   - {fileID: 3823689752220846828}
+  - {fileID: 4921742841911914262}
   m_Father: {fileID: 2351938317442017812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8607240412283667944
@@ -1321,6 +1311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lampController: {fileID: 2894239068922545106}
   FlashButton: {fileID: 2682809103114763995}
+  isFlashing: 0
 --- !u!4 &8737119304523836267
 Transform:
   m_ObjectHideFlags: 0
