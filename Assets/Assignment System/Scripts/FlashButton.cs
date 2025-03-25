@@ -21,12 +21,9 @@ public class FlashButton : MonoBehaviour
         if (lampController.isOn == true && !isOn)
         {
             TurnOn();
-            onClick.Invoke(); // 鼠标松开时触发事件
+            Debug.Log("Start Flashing 5s");
+            onClick.Invoke();
         }   
-        else
-        {
-            TurnOff();
-        }
     }
 
     public void TurnOn()
