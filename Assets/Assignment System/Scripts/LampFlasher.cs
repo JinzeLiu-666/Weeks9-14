@@ -5,6 +5,7 @@ using System.Collections;
 public class LampFlasher : MonoBehaviour
 {
     public LampController lampController;
+    private Coroutine flashCoroutine;
     public FlashButton FlashButton;
 
     public bool isFlashing = false;
