@@ -20,9 +20,8 @@ public class LampBreaker : MonoBehaviour
             isBroken = true;
 
             StopAllCoroutines();
-            lampController.enabled = false;
-            lampFlasher.enabled = false;
             lightOverlay.SetActive(false);
+            lampController.TurnOff();
 
             for (int i = 0; i < buttonsToDisable.Length; i++)
             {

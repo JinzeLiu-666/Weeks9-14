@@ -10,10 +10,12 @@ public class FlashButton : MonoBehaviour
     public GameObject offImage;
     public UnityEvent onClick;
     public LampController lampController;
+    public LampFlasher lampFlasher;
 
     void Start()
     {
         TurnOff();
+        onClick.AddListener(lampFlasher.StartFlashing);
     }
 
     void OnMouseDown()
@@ -39,11 +41,3 @@ public class FlashButton : MonoBehaviour
         offImage.SetActive(true);
     }
 }
-
-
-
-
-
-
-
-

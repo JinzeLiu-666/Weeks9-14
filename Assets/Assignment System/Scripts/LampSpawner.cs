@@ -15,10 +15,10 @@ public class LampSpawner : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1)) //  Û±Í”“º¸
+        if (Input.GetMouseButtonDown(1))
         {
             Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            GameObject newLamp = Instantiate(lampPrefab, mouseWorldPos, Quaternion.identity);
+            GameObject newLamp = Instantiate(lampPrefab, mouseWorldPos, lampPrefab.transform.rotation);
 
             LampGrow growScript = newLamp.GetComponent<LampGrow>();
             growScript.StartGrow();

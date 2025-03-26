@@ -26,6 +26,6 @@ public class DestroyButton : MonoBehaviour
         image1.SetActive(true);
         image2.SetActive(false);
 
-        onClick.Invoke(); // ‘⁄ Inspector ÷–…Ë÷√ DestroyLamp()
+        onClick.Invoke();
     }
 }

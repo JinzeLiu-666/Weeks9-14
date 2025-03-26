@@ -26,7 +26,6 @@ public class LampFlasher : MonoBehaviour
 
         while (timer < 5f && lampController.isOn)
         {
-            // 每0.5秒，切换 lightOverlay 的显示    状态
             bool currentState = lampController.lightOverlay.activeSelf;
             lampController.lightOverlay.SetActive(!currentState);
 
@@ -34,7 +33,6 @@ public class LampFlasher : MonoBehaviour
             timer = timer + 0.25f;
         }
 
-        // 闪烁结束后，强制亮灯（你也可以改成 TurnOff()）
         lampController.lightOverlay.SetActive(false);
         isFlashing = false;
         FlashButton.TurnOff();

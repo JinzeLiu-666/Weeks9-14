@@ -7,6 +7,7 @@ public class ColorButton : MonoBehaviour
 {
     public GameObject image1;
     public GameObject image2;
+    public LampColorChanger lampColorChanger;
 
     void Start()
     {
