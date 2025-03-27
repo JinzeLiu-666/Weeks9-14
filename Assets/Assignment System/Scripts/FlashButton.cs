@@ -15,7 +15,6 @@ public class FlashButton : MonoBehaviour
     void Start()
     {
         TurnOff();
-        onClick.AddListener(lampFlasher.StartFlashing);
     }
 
     void OnMouseDown()
