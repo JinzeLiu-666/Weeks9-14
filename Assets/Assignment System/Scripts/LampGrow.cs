@@ -6,7 +6,7 @@ public class LampGrow : MonoBehaviour
 {
     public AnimationCurve growCurve;
     public float growTime = 1f;
-    public float targetScale = 0.4f; // 最终缩放目标
+    public float targetScale = 0.4f;
 
     public void StartGrow()
     {
