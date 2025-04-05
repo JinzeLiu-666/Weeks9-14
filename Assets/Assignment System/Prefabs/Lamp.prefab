@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 4055188431204153869}
   - component: {fileID: 1055010836582451180}
   - component: {fileID: 8680630450291532877}
-  - component: {fileID: 8195124697297741266}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -223,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc87d8d423bdec4fbb8758b50940611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LampBreaker: {fileID: 4670182820394050556}
   isOn: 0
   buttonImage: {fileID: 8377996091828451338}
   trunon: {fileID: 21300000, guid: dddc37fed93312c4481f22af8bc7b073, type: 3}
@@ -246,19 +246,6 @@ MonoBehaviour:
   trunoff: {fileID: 21300000, guid: 2bbfb774d7a4b704d81298235c0ede8d, type: 3}
   buttonImage: {fileID: 7271075964786399752}
   toggleButton: {fileID: 1055010836582451180}
---- !u!114 &8195124697297741266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408742405080970670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 645d514387e8c504498ef0b43553a172, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  can: {fileID: 9008095980998555160}
 --- !u!1 &1596264475333691819
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +392,7 @@ GameObject:
   - component: {fileID: 7599287902085855942}
   - component: {fileID: 3561549582642791837}
   - component: {fileID: 7075810684015494361}
+  - component: {fileID: 4670182820394050556}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -422,7 +410,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.24, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1697310725647372216}
@@ -506,12 +494,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89df01121d9ed634aa9c0669c665bdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LampBreaker: {fileID: 4670182820394050556}
   ToggleButton: {fileID: 1055010836582451180}
   FlashButton: {fileID: 8680630450291532877}
   isFlashing: 0
   star: {x: 0, y: 0, z: 0}
-  end: {x: 1.3, y: 1.3, z: 1.3}
+  end: {x: 1, y: 1, z: 1}
   speed: 2
+--- !u!114 &4670182820394050556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683378089507061120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645d514387e8c504498ef0b43553a172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  can: {fileID: 9008095980998555160}
+  broken: 1
 --- !u!1 &2370525570258816190
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.439, y: -2.82}
+  m_AnchoredPosition: {x: -1.439, y: -2.02}
   m_SizeDelta: {x: 0.4807, y: 0.7841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5461757624065465956
@@ -899,7 +902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.529, y: -2.838}
+  m_AnchoredPosition: {x: 0.529, y: -2.038}
   m_SizeDelta: {x: 0.4807, y: 0.7841}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6998813733921399188
@@ -1178,7 +1181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.45, y: -2.848}
+  m_AnchoredPosition: {x: 1.45, y: -2.0480003}
   m_SizeDelta: {x: 0.8096, y: 0.8067}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2864552370776815930
@@ -1263,7 +1266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8195124697297741266}
+      - m_Target: {fileID: 4670182820394050556}
         m_TargetAssemblyTypeName: LampBreaker, Assembly-CSharp
         m_MethodName: DestroyLamp
         m_Mode: 1
@@ -1323,7 +1326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.47348, y: -2.8312993}
+  m_AnchoredPosition: {x: -0.47348, y: -2.0312996}
   m_SizeDelta: {x: 0.94695, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4608758281770083541

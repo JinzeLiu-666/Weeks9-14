@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class LampFlasher : MonoBehaviour
 {
-    public ToggleButton ToggleButton;
-    public FlashButton FlashButton;
+    public LampBreaker lampBreaker;
+    public ToggleButton toggleButton;
+    public FlashButton flashButton;
     public bool isFlashing = false;
 
     public Vector3 star = Vector3.zero;
     public Vector3 end = new Vector3(1.3f, 1.3f, 1.3f);
     public float speed = 2f;
 
-
     public void StartFlashing()
     {
-        if (!isFlashing && FlashButton.isOn)
+        if (!isFlashing && flashButton.isOn)
         {
             isFlashing = true;
             StartCoroutine(FlashRoutine());
@@ -29,7 +29,7 @@ public class LampFlasher : MonoBehaviour
         float t = 0f;
         bool goingUp = true;
 
-        while (finalTime < 5.5f && ToggleButton.isOn)
+        while (finalTime < 5.5f && toggleButton.isOn && lampBreaker.broken)
         {
             if (goingUp)
             {
@@ -56,6 +56,6 @@ public class LampFlasher : MonoBehaviour
         }
         transform.localScale = end;
         isFlashing = false;
-        FlashButton.isOn = false;
+        flashButton.isOn = false;
     }
 }

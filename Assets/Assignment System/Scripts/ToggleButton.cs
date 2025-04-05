@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class ToggleButton : MonoBehaviour
 {
+    public LampBreaker lampBreaker;
     public bool isOn;
     public Image buttonImage;
+    
     public Sprite trunon;
     public Sprite trunoff;
 
@@ -20,7 +22,7 @@ public class ToggleButton : MonoBehaviour
 
     void Update()
     {
-        if (isOn)
+        if (isOn && lampBreaker.broken)
         {
             buttonImage.sprite = trunon;
             lightOn.SetActive(true);

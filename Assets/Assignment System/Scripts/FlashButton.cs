@@ -6,12 +6,11 @@ using UnityEngine.UI;
 
 public class FlashButton : MonoBehaviour
 {
+    public ToggleButton toggleButton;
     public bool isOn = false;
     public Sprite trunon;
     public Sprite trunoff;
     public Image buttonImage;
-    public ToggleButton toggleButton;
-
 
     void Start()
     {

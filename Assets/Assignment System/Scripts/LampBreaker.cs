@@ -5,21 +5,12 @@ using UnityEngine.Events;
 
 public class LampBreaker : MonoBehaviour
 {
-    public ToggleButton ToggleButton;
-    public LampFlasher lampFlasher;
-
     public GameObject can;
-
-    private bool isBroken = false;
+    public bool broken = true;
 
     public void DestroyLamp()
     {
-        if (isBroken == false)
-        {
-            isBroken = true;
-
-            StopAllCoroutines();
-            can.SetActive(false);
-        }
+        broken = false;
+        can.SetActive(false);
     }
 }
