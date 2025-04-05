@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc87d8d423bdec4fbb8758b50940611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LampBreaker: {fileID: 4670182820394050556}
+  lampBreaker: {fileID: 4670182820394050556}
   isOn: 0
   buttonImage: {fileID: 8377996091828451338}
   trunon: {fileID: 21300000, guid: dddc37fed93312c4481f22af8bc7b073, type: 3}
@@ -241,11 +241,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41989491e6edc544583ff72aff52e1f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggleButton: {fileID: 1055010836582451180}
   isOn: 0
   trunon: {fileID: 21300000, guid: dddc37fed93312c4481f22af8bc7b073, type: 3}
   trunoff: {fileID: 21300000, guid: 2bbfb774d7a4b704d81298235c0ede8d, type: 3}
   buttonImage: {fileID: 7271075964786399752}
-  toggleButton: {fileID: 1055010836582451180}
 --- !u!1 &1596264475333691819
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,9 +494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89df01121d9ed634aa9c0669c665bdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LampBreaker: {fileID: 4670182820394050556}
-  ToggleButton: {fileID: 1055010836582451180}
-  FlashButton: {fileID: 8680630450291532877}
+  lampBreaker: {fileID: 4670182820394050556}
+  toggleButton: {fileID: 1055010836582451180}
+  flashButton: {fileID: 8680630450291532877}
   isFlashing: 0
   star: {x: 0, y: 0, z: 0}
   end: {x: 1, y: 1, z: 1}
