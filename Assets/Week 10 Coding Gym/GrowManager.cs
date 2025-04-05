@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrowManager : MonoBehaviour
 {
-    public PlanePart[] parts; // 手动将部件拖进去（PartA, PartB, PartC）
+    public PlanePart[] parts;
 
     void Start()
     {

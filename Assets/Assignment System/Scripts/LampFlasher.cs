@@ -13,9 +13,10 @@ public class LampFlasher : MonoBehaviour
     public Vector3 end = new Vector3(1.3f, 1.3f, 1.3f);
     public float speed = 2f;
 
+
     public void StartFlashing()
     {
-        if (!isFlashing && ToggleButton.isOn && FlashButton.isOn)
+        if (!isFlashing && FlashButton.isOn)
         {
             isFlashing = true;
             StartCoroutine(FlashRoutine());
@@ -28,7 +29,7 @@ public class LampFlasher : MonoBehaviour
         float t = 0f;
         bool goingUp = true;
 
-        while (finalTime < 5f && ToggleButton.isOn)
+        while (finalTime < 5.5f && ToggleButton.isOn)
         {
             if (goingUp)
             {
@@ -53,7 +54,7 @@ public class LampFlasher : MonoBehaviour
             finalTime += Time.deltaTime;
             yield return null;
         }
-        transform.localScale = star;
+        transform.localScale = end;
         isFlashing = false;
         FlashButton.isOn = false;
     }

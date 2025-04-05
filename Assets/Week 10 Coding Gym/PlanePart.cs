@@ -7,7 +7,6 @@ public class PlanePart : MonoBehaviour
     public AnimationCurve growCurve;
     public float growTime = 1f;
 
-    // 改为公开调用，不再在 OnEnable 中触发
     public IEnumerator GrowCoroutine()
     {
         float t = 0f;

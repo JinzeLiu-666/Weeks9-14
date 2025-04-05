@@ -11,7 +11,7 @@ public class FlashButton : MonoBehaviour
     public Sprite trunoff;
     public Image buttonImage;
     public ToggleButton toggleButton;
-    // public LampFlasher lampFlasher;
+
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class FlashButton : MonoBehaviour
 
     void Update()
     {
-        if (toggleButton.isOn && isOn)
+        if (isOn)
         {
             buttonImage.sprite = trunon;
         }

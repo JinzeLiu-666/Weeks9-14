@@ -5,10 +5,10 @@ using UnityEngine;
 public class LampGrow : MonoBehaviour
 {
     public AnimationCurve growCurve;
+    [Range(0.1f, 2f)]
     public float growTime = 1f;
-    public float targetScale = 0.4f;
 
-    public void StartGrow()
+    void Start()
     {
         StartCoroutine(GrowCoroutine());
     }
@@ -16,20 +16,12 @@ public class LampGrow : MonoBehaviour
     private IEnumerator GrowCoroutine()
     {
         float t = 0f;
-        transform.localScale = Vector3.zero;
-
         while (t < growTime)
         {
-            float progress = t / growTime;
-            float evaluated = growCurve.Evaluate(progress);
-            float scaleValue = evaluated * targetScale;
-
-            transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
-
+            transform.localScale = Vector3.one * growCurve.Evaluate(t);
             t += Time.deltaTime;
             yield return null;
         }
-
-        transform.localScale = new Vector3(targetScale, targetScale, targetScale);
+        transform.localScale = Vector3.one;
     }
 }

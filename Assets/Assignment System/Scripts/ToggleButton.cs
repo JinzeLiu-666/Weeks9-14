@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class ToggleButton : MonoBehaviour
 {
-    public GameObject lightOverlay;
-    public FlashButton flashButton;
     public bool isOn;
     public Image buttonImage;
     public Sprite trunon;
     public Sprite trunoff;
+
+    public GameObject lightOn;
+    public GameObject lightOff;
 
     void Start()
     {
@@ -22,12 +23,14 @@ public class ToggleButton : MonoBehaviour
         if (isOn)
         {
             buttonImage.sprite = trunon;
-            lightOverlay.SetActive(true);
+            lightOn.SetActive(true);
+            lightOff.SetActive(false);
         }
         else
         {
             buttonImage.sprite = trunoff;
-            lightOverlay.SetActive(false);
+            lightOn.SetActive(false);
+            lightOff.SetActive(true);
         }
     }
 
