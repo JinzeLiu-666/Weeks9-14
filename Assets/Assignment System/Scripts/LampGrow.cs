@@ -10,6 +10,7 @@ public class LampGrow : MonoBehaviour
 
     void Start()
     {
+        // Start the growth at the beginning
         StartCoroutine(GrowCoroutine());
     }
 
@@ -18,6 +19,7 @@ public class LampGrow : MonoBehaviour
         float t = 0f;
         while (t < growTime)
         {
+            // Use the animation curve to decide how big the object should be at time t
             transform.localScale = Vector3.one * growCurve.Evaluate(t);
             t += Time.deltaTime;
             yield return null;

@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class ToggleButton : MonoBehaviour
 {
     public LampBreaker lampBreaker;
-    public bool isOn;
-    public Image buttonImage;
     
+    public bool isOn;
+    
+    public Image buttonImage;
     public Sprite trunon;
     public Sprite trunoff;
 
@@ -22,6 +23,7 @@ public class ToggleButton : MonoBehaviour
 
     void Update()
     {
+        // Check if the lamp is broken and the button is pressed
         if (isOn && lampBreaker.broken)
         {
             buttonImage.sprite = trunon;

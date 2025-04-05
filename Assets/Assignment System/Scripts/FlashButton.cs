@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class FlashButton : MonoBehaviour
 {
     public ToggleButton toggleButton;
+    
     public bool isOn = false;
+    
+    public Image buttonImage;
     public Sprite trunon;
     public Sprite trunoff;
-    public Image buttonImage;
 
     void Start()
     {
@@ -29,11 +31,10 @@ public class FlashButton : MonoBehaviour
         }
     }
 
+    // Change Bool by UnityEvent
+
     public void changeImage()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            isOn = !isOn;
-        }
+        isOn = !isOn;
     }
 }

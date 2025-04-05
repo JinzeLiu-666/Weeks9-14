@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 1194668481}
   - component: {fileID: 1194668480}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Tips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1912399733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1354,10 +1354,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
-    - target: {fileID: 3553806400304055066, guid: fdb1de57d3a9395458137a75eb2d8039, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1371,6 +1367,6 @@ SceneRoots:
   - {fileID: 496446152}
   - {fileID: 1686781792}
   - {fileID: 1798858386}
-  - {fileID: 4658153983923261217}
   - {fileID: 1912399734}
   - {fileID: 1117099966}
+  - {fileID: 4658153983923261217}

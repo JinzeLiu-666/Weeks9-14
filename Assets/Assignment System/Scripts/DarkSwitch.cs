@@ -22,6 +22,8 @@ public class DarkSwitch : MonoBehaviour
             dark.SetActive(false);
         }
     }
+
+    // Change Bool by UnityEvent
     public void changeDark()
     {
         isOn = !isOn;

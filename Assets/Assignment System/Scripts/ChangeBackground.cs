@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChangeBackground : MonoBehaviour
@@ -17,6 +18,7 @@ public class ChangeBackground : MonoBehaviour
 
     public void NextBackground()
     {
+        // Change the image by increasing the number when the UnityEvent's click event is triggered.
         if (currentIndex == 0)
         {
             backgroundRenderer.sprite = background1;
