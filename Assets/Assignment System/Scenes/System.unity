@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 496446152}
   - component: {fileID: 496446151}
   - component: {fileID: 496446153}
+  - component: {fileID: 496446154}
   m_Layer: 0
   m_Name: LampSpawner
   m_TagString: Untagged
@@ -272,11 +273,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc87d8d423bdec4fbb8758b50940611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightOverlay: {fileID: 1400564336}
+  lightOverlay: {fileID: 1090105186}
+  flashButton: {fileID: 0}
   isOn: 0
   buttonImage: {fileID: 529365840}
   trunon: {fileID: 21300000, guid: dddc37fed93312c4481f22af8bc7b073, type: 3}
   trunoff: {fileID: 21300000, guid: 2bbfb774d7a4b704d81298235c0ede8d, type: 3}
+--- !u!114 &496446154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496446150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41989491e6edc544583ff72aff52e1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  trunon: {fileID: 21300000, guid: dddc37fed93312c4481f22af8bc7b073, type: 3}
+  trunoff: {fileID: 21300000, guid: 2bbfb774d7a4b704d81298235c0ede8d, type: 3}
+  buttonImage: {fileID: 560882067}
+  toggleButton: {fileID: 496446153}
 --- !u!114 &529365840 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7146108914247846600, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
@@ -288,9 +307,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1400564336 stripped
+--- !u!114 &560882067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1703543306479831661, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+  m_PrefabInstance: {fileID: 1463428885797129713}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1090105186 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8993692300391764660, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8743336120939839722, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
   m_PrefabInstance: {fileID: 1463428885797129713}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1686781788
@@ -462,6 +492,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2094425243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4347140625958495080, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+  m_PrefabInstance: {fileID: 1463428885797129713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1463428885797129713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,6 +505,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 746533920174723000, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+      propertyPath: can
+      value: 
+      objectReference: {fileID: 2094425243}
+    - target: {fileID: 746533920174723000, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+      propertyPath: buttonsToDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5548597236581092317, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -515,60 +558,56 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 496446153}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1090105186}
+    - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: changeImage
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToggleButton, Assembly-CSharp
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5604145128321001548, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 8121642576393125816, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+    - target: {fileID: 8743336120939839722, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 496446153}
-    - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 496446154}
     - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: changeImage
       objectReference: {fileID: 0}
     - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ToggleButton, Assembly-CSharp
+      value: FlashButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8879969396983237005, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -579,7 +618,9 @@ PrefabInstance:
       value: Lamp1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4062426061641356288, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
+    - {fileID: 816181454263866825, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0aa9bb0f5cd004684f2b39bd6069e1, type: 3}

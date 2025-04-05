@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ToggleButton : MonoBehaviour
 {
     public GameObject lightOverlay;
+    public FlashButton flashButton;
     public bool isOn;
     public Image buttonImage;
     public Sprite trunon;

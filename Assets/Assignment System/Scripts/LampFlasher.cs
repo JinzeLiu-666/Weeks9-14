@@ -35,7 +35,7 @@ public class LampFlasher : MonoBehaviour
 
         ToggleButton.lightOverlay.SetActive(false);
         isFlashing = false;
-        FlashButton.TurnOff();
+        FlashButton.isOn = false;
         // lampController.TurnOff();
     }
 }

@@ -8,8 +8,7 @@ public class LampBreaker : MonoBehaviour
     public ToggleButton ToggleButton;
     public LampFlasher lampFlasher;
 
-    public GameObject lightOverlay;
-    public GameObject[] buttonsToDisable;
+    public GameObject can;
 
     private bool isBroken = false;
 
@@ -20,13 +19,7 @@ public class LampBreaker : MonoBehaviour
             isBroken = true;
 
             StopAllCoroutines();
-            lightOverlay.SetActive(false);
-            // lampController.TurnOff();
-
-            for (int i = 0; i < buttonsToDisable.Length; i++)
-            {
-                buttonsToDisable[i].SetActive(false);
-            }
+            can.SetActive(false);
         }
     }
 }
