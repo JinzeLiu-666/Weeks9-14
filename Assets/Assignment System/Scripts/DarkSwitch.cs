@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class DarkSwitch : MonoBehaviour
 {
-    public bool isOn = true;
+    public bool isOn;
     public GameObject dark;
+    void Start()
+    {
+        isOn = true;
+    }
 
     void Update()
     {
