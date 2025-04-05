@@ -1,45 +1,38 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
-public class LampController : MonoBehaviour
+public class ToggleButton : MonoBehaviour
 {
     public GameObject lightOverlay;
-
-    public GameObject onImage;
-    public GameObject offImage;
     public bool isOn;
-
+    public Image buttonImage;
+    public Sprite trunon;
+    public Sprite trunoff;
 
     void Start()
     {
-        TurnOff();
+        isOn = false;
     }
 
-    void OnMouseDown()
+    void Update()
     {
         if (isOn)
         {
-            TurnOff();
+            buttonImage.sprite = trunon;
         }
         else
         {
-            TurnOn();
+            buttonImage.sprite = trunoff;
         }
     }
-    public void TurnOn()
-    {
-        isOn = true;
-        lightOverlay.SetActive(true);
-        onImage.SetActive(true);
-        offImage.SetActive(false);
-    }
 
-    public void TurnOff()
+    public void changeImage()
     {
-        isOn = false;
-        lightOverlay.SetActive(false);
-        onImage.SetActive(false);
-        offImage.SetActive(true);
+        if (Input.GetMouseButtonUp(0))
+        {
+            isOn = !isOn;
+        }
     }
 }

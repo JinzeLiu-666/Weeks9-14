@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class LampBreaker : MonoBehaviour
 {
-    public LampController lampController;
+    public ToggleButton ToggleButton;
     public LampFlasher lampFlasher;
 
     public GameObject lightOverlay;
@@ -21,7 +21,7 @@ public class LampBreaker : MonoBehaviour
 
             StopAllCoroutines();
             lightOverlay.SetActive(false);
-            lampController.TurnOff();
+            // lampController.TurnOff();
 
             for (int i = 0; i < buttonsToDisable.Length; i++)
             {

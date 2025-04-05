@@ -4,7 +4,7 @@ using System.Collections;
 
 public class LampFlasher : MonoBehaviour
 {
-    public LampController lampController;
+    public ToggleButton ToggleButton;
     private Coroutine flashCoroutine;
     public FlashButton FlashButton;
 
@@ -24,18 +24,18 @@ public class LampFlasher : MonoBehaviour
     {
         float timer = 0f;
 
-        while (timer < 5f && lampController.isOn)
+        while (timer < 5f && ToggleButton.isOn)
         {
-            bool currentState = lampController.lightOverlay.activeSelf;
-            lampController.lightOverlay.SetActive(!currentState);
+            bool currentState = ToggleButton.lightOverlay.activeSelf;
+            ToggleButton.lightOverlay.SetActive(!currentState);
 
             yield return new WaitForSeconds(0.25f);
             timer = timer + 0.25f;
         }
 
-        lampController.lightOverlay.SetActive(false);
+        ToggleButton.lightOverlay.SetActive(false);
         isFlashing = false;
         FlashButton.TurnOff();
-        lampController.TurnOff();
+        // lampController.TurnOff();
     }
 }

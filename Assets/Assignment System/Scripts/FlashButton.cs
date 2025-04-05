@@ -9,7 +9,7 @@ public class FlashButton : MonoBehaviour
     public GameObject onImage;
     public GameObject offImage;
     public UnityEvent onClick;
-    public LampController lampController;
+    public ToggleButton ToggleButton;
     public LampFlasher lampFlasher;
 
     void Start()
@@ -19,7 +19,7 @@ public class FlashButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (lampController.isOn == true && !isOn)
+        if (ToggleButton.isOn == true && !isOn)
         {
             TurnOn();
             Debug.Log("Start Flashing 5s");
