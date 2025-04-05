@@ -10,8 +10,10 @@ public class ChangeBackground : MonoBehaviour
     public Sprite background2;
     public Sprite background3;
     public Sprite background4;
+    public Sprite background5;
+    public Sprite background6;
 
-    private int currentIndex = 0;
+    private int currentIndex = 1;
 
     public void NextBackground()
     {
@@ -31,6 +33,21 @@ public class ChangeBackground : MonoBehaviour
             currentIndex = 3;
         }
         else if (currentIndex == 3)
+        {
+            backgroundRenderer.sprite = background4;
+            currentIndex = 4;
+        }
+        else if (currentIndex == 4)
+        {
+            backgroundRenderer.sprite = background2;
+            currentIndex = 5;
+        }
+        else if (currentIndex == 5)
+        {
+            backgroundRenderer.sprite = background3;
+            currentIndex = 6;
+        }
+        else if (currentIndex == 6)
         {
             backgroundRenderer.sprite = background4;
             currentIndex = 0;

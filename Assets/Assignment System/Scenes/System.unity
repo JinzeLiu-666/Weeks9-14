@@ -338,7 +338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 145234586}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 496446154}
+        m_TargetAssemblyTypeName: ChangeBackground, Assembly-CSharp
+        m_MethodName: NextBackground
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &145234586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +625,7 @@ GameObject:
   - component: {fileID: 496446152}
   - component: {fileID: 496446151}
   - component: {fileID: 496446153}
+  - component: {fileID: 496446154}
   m_Layer: 0
   m_Name: LampControl
   m_TagString: Untagged
@@ -662,6 +675,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOn: 0
   dark: {fileID: 1912399732}
+--- !u!114 &496446154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496446150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64849ffc61d0eca44b8f9664656fbbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundRenderer: {fileID: 1117099965}
+  background1: {fileID: 21300000, guid: b600c47ef6772ff40a834e6080f8ddb1, type: 3}
+  background2: {fileID: 21300000, guid: a07be1d7f6c3c91478a12d30027342ee, type: 3}
+  background3: {fileID: 21300000, guid: 2b2dd3bc9d09eb646b182cf46613cd5b, type: 3}
+  background4: {fileID: 21300000, guid: 2dd4f2d623f756e40bbcb1a86522ea52, type: 3}
+  background5: {fileID: 21300000, guid: 1e78c79293dd43e4096e1ac259d01463, type: 3}
+  background6: {fileID: 21300000, guid: 7d06fa7323f25204c8dbdf3b32a6086a, type: 3}
 --- !u!1 &1117099964
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,12 +752,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 148f973d2f4a42945a1112e89a90f8a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b600c47ef6772ff40a834e6080f8ddb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -740,8 +772,8 @@ Transform:
   m_GameObject: {fileID: 1117099964}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.08, z: 0}
-  m_LocalScale: {x: 7.782104, y: 7.782104, z: 7.782104}
+  m_LocalPosition: {x: 0.0499, y: -0.106, z: 0}
+  m_LocalScale: {x: 2.5404055, y: 2.5404055, z: 2.5404055}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1264,8 +1296,8 @@ Transform:
   m_GameObject: {fileID: 1912399732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0367, y: 0.0269, z: 0}
-  m_LocalScale: {x: 113.6269, y: 63.890236, z: 20.619339}
+  m_LocalPosition: {x: -0.0106, y: 0.0416, z: 0}
+  m_LocalScale: {x: 71.275055, y: 40.076603, z: 12.9339485}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
