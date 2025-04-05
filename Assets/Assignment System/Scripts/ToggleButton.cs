@@ -21,14 +21,16 @@ public class ToggleButton : MonoBehaviour
         if (isOn)
         {
             buttonImage.sprite = trunon;
+            lightOverlay.SetActive(true);
         }
         else
         {
             buttonImage.sprite = trunoff;
+            lightOverlay.SetActive(false);
         }
     }
 
-    public void changeImage()
+    public void changeImage() 
     {
         if (Input.GetMouseButtonUp(0))
         {

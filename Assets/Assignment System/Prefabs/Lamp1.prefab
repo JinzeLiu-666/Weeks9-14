@@ -227,9 +227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightOverlay: {fileID: 8743336120939839722}
-  onImage: {fileID: 8233088674929528282}
-  offImage: {fileID: 4551000277960873422}
   isOn: 0
+  buttonImage: {fileID: 0}
+  trunon: {fileID: 0}
+  trunoff: {fileID: 0}
 --- !u!1 &757924589301676999
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +535,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  lampController: {fileID: 9063066495607459323}
+  ToggleButton: {fileID: 0}
   lampFlasher: {fileID: 0}
 --- !u!1 &1969277506897806597
 GameObject:
@@ -1031,7 +1032,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1703543306479831661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ToggleButton, Assembly-CSharp
+        m_MethodName: changeImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4347140625958495080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1487,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7146108914247846600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ToggleButton, Assembly-CSharp
+        m_MethodName: changeImage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6359410960494498777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +2002,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &587381753544425794
 Transform:
   m_ObjectHideFlags: 0
@@ -2009,7 +2034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89df01121d9ed634aa9c0669c665bdfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lampController: {fileID: 9063066495607459323}
+  ToggleButton: {fileID: 0}
   FlashButton: {fileID: 6480845686255910347}
   isFlashing: 0
 --- !u!1 &8223017959204750614
@@ -2574,7 +2599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 645d514387e8c504498ef0b43553a172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lampController: {fileID: 9063066495607459323}
+  ToggleButton: {fileID: 0}
   lampFlasher: {fileID: 7031080720469355868}
   lightOverlay: {fileID: 8743336120939839722}
   buttonsToDisable:
