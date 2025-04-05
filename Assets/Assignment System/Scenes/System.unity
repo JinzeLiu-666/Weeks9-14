@@ -772,8 +772,8 @@ Transform:
   m_GameObject: {fileID: 1117099964}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0499, y: -0.106, z: 0}
-  m_LocalScale: {x: 2.5404055, y: 2.5404055, z: 2.5404055}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1296,8 +1296,8 @@ Transform:
   m_GameObject: {fileID: 1912399732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0106, y: 0.0416, z: 0}
-  m_LocalScale: {x: 71.275055, y: 40.076603, z: 12.9339485}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1353,6 +1353,10 @@ PrefabInstance:
     - target: {fileID: 1408742405080970670, guid: fdb1de57d3a9395458137a75eb2d8039, type: 3}
       propertyPath: m_Name
       value: Lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553806400304055066, guid: fdb1de57d3a9395458137a75eb2d8039, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
