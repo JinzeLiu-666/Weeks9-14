@@ -23,7 +23,6 @@ public class FlashButton : MonoBehaviour
         if (toggleButton.isOn && isOn)
         {
             buttonImage.sprite = trunon;
-            Debug.Log("Start Flashing 5s");
         }
         else
         {
