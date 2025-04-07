@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class LampBreaker : MonoBehaviour
 {
     public GameObject can;
+    public GameObject lamp;
     public bool broken = true;
 
     // Called by UnityEvent
@@ -14,5 +15,6 @@ public class LampBreaker : MonoBehaviour
         broken = false;
         // Close all UI button
         can.SetActive(false);
+        Destroy(lamp, 3f);
     }
 }

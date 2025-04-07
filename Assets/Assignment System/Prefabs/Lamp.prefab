@@ -243,9 +243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleButton: {fileID: 1055010836582451180}
   isOn: 0
+  buttonImage: {fileID: 7271075964786399752}
   trunon: {fileID: 21300000, guid: dddc37fed93312c4481f22af8bc7b073, type: 3}
   trunoff: {fileID: 21300000, guid: 2bbfb774d7a4b704d81298235c0ede8d, type: 3}
-  buttonImage: {fileID: 7271075964786399752}
 --- !u!1 &1596264475333691819
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,9 +498,9 @@ MonoBehaviour:
   toggleButton: {fileID: 1055010836582451180}
   flashButton: {fileID: 8680630450291532877}
   isFlashing: 0
+  speed: 2
   star: {x: 0, y: 0, z: 0}
   end: {x: 1, y: 1, z: 1}
-  speed: 2
 --- !u!114 &4670182820394050556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   can: {fileID: 9008095980998555160}
+  lamp: {fileID: 1408742405080970670}
   broken: 1
 --- !u!1 &2370525570258816190
 GameObject:
