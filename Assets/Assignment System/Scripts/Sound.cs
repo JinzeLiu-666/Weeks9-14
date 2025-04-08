@@ -5,13 +5,13 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
     AudioSource clickSound;
-    // Start is called before the first frame update
+
     void Start()
     {
+        // Get the AudioSource component attached to this GameObject
         clickSound = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     public void Click()
     {
         clickSound.Play();

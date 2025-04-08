@@ -40,9 +40,6 @@ public class ToggleButton : MonoBehaviour
 
     public void changeImage() 
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            isOn = !isOn;
-        }
+        isOn = !isOn;
     }
 }

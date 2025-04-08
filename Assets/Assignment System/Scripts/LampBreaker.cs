@@ -15,6 +15,7 @@ public class LampBreaker : MonoBehaviour
         broken = false;
         // Close all UI button
         can.SetActive(false);
+        // Destroy the break lamp
         Destroy(lamp, 3f);
     }
 }
