@@ -5,24 +5,33 @@ using UnityEngine;
 public class PlanePart : MonoBehaviour
 {
     public AnimationCurve growCurve;
-    public float growTime = 1f;
+    public float duration = 1f;
 
-    public IEnumerator GrowCoroutine()
+    void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(Grow());
+        }
+    }
+
+    IEnumerator Grow()
     {
         float t = 0f;
-        transform.localScale = Vector3.zero;
+        Vector3 startScale = Vector3.zero;
+        Vector3 endScale = Vector3.one;
 
-        while (t < growTime)
+        while (t < duration)
         {
-            float progress = t / growTime;
-            float scaleValue = growCurve.Evaluate(progress);
-            transform.localScale = new Vector3(scaleValue, scaleValue, scaleValue);
+            float progress = t / duration;
+            float curveValue = growCurve.Evaluate(progress);
+            transform.localScale = Vector3.LerpUnclamped(startScale, endScale, curveValue);
 
             t += Time.deltaTime;
             yield return null;
         }
 
-        transform.localScale = Vector3.one;
+        transform.localScale = endScale;
     }
 }
 
